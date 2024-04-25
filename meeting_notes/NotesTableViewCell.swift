@@ -9,9 +9,70 @@ import UIKit
 
 class NotesTableViewCell: UITableViewCell , UICollectionViewDataSource, UICollectionViewDelegate{
     
+    
+    @IBOutlet var clientName: UILabel!
+    @IBOutlet var subject: UILabel!
+    @IBOutlet var dateCreated: UILabel!
+    @IBOutlet var dateUpdated: UILabel!
+    
+    @IBAction func editButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        
+        delegate?.didTapDeleteButton(cell: self)
+    }
+    
+    
+    
+    
+    weak var delegate: CustomTableViewCellDelegate?
+    
+    @IBAction func menuButtonTap(_ sender: Any) {
+        editDeleteMenu.frame = CGRect(x: menuButton.frame.minX - (editDeleteMenu.frame.width / 2), y: menuButton.frame.maxY, width: 80, height: 64)
+        editDeleteMenu.layer.cornerRadius = 8
+        
+        if editDeleteMenu.isHidden{
+            self.editDeleteMenu.isHidden.toggle()
+            editDeleteMenu.alpha = 0
+            editDeleteMenu.transform = CGAffineTransform(translationX: -10, y: 0)
+            
+            
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                self.editDeleteMenu.alpha = 1
+                self.editDeleteMenu.transform = .identity
+            }, completion: { _ in
+                self.addSubview(self.editDeleteMenu)
+                
+                
+            })
+            
+        }
+        else{
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                self.editDeleteMenu.alpha = 0
+                self.editDeleteMenu.transform = CGAffineTransform(translationX: -10, y: 0)
+            }, completion: { _ in
+                self.editDeleteMenu.removeFromSuperview()
+                self.editDeleteMenu.isHidden.toggle()
+                
+            })
+        }
+        
+        
+//        delegate?.didTapDeleteButton(cell: self)
+        
+    }
+    
+    @IBOutlet var menuButton: UIButton!
+    
+    
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var containerView: UIView!
     @IBOutlet var labelCollectionView: UICollectionView!
+    
+    
+    @IBOutlet var editDeleteMenu: UIView!
     
     
     var labelsArray : [String] = ["x","y","z"]
@@ -75,12 +136,12 @@ class NotesTableViewCell: UITableViewCell , UICollectionViewDataSource, UICollec
         
         
         cell.backgroundColor = UIColor(named: "label_bg")
-        cell.label.text = "a"
+        cell.setText(labelsArray[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return labelsArray.count
     }
     
 }

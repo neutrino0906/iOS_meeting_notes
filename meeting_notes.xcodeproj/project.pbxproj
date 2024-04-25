@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C724C4442BDA7FA600491F8D /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724C4432BDA7FA600491F8D /* protocols.swift */; };
 		C767FB162BD6989800F8BB6F /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767FB142BD6989800F8BB6F /* NotesTableViewCell.swift */; };
 		C767FB172BD6989800F8BB6F /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C767FB152BD6989800F8BB6F /* NotesTableViewCell.xib */; };
 		C79C46402BD77428009DB5D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79C463F2BD77428009DB5D0 /* HomeViewModel.swift */; };
@@ -15,6 +16,9 @@
 		C79C464B2BD7B908009DB5D0 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79C464A2BD7B908009DB5D0 /* CreateNoteViewController.swift */; };
 		C79C464D2BD7C8D8009DB5D0 /* CreateNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79C464C2BD7C8D8009DB5D0 /* CreateNoteView.swift */; };
 		C79C464F2BD7CE96009DB5D0 /* CreateNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79C464E2BD7CE96009DB5D0 /* CreateNoteView.xib */; };
+		C7A943D92BD8C2BA00165E0E /* SearchClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A943D82BD8C2BA00165E0E /* SearchClientViewController.swift */; };
+		C7A943DD2BD8DE4E00165E0E /* EditDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A943DC2BD8DE4E00165E0E /* EditDescriptionView.swift */; };
+		C7A943DF2BD8EF5700165E0E /* CreateNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A943DE2BD8EF5700165E0E /* CreateNoteViewModel.swift */; };
 		C7B791F02BD67E4E0023DC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B791EF2BD67E4E0023DC34 /* AppDelegate.swift */; };
 		C7B791F22BD67E4E0023DC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B791F12BD67E4E0023DC34 /* SceneDelegate.swift */; };
 		C7B791F42BD67E4E0023DC34 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B791F32BD67E4E0023DC34 /* HomeViewController.swift */; };
@@ -33,6 +37,9 @@
 		C7B7922E2BD686BC0023DC34 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B792252BD686BC0023DC34 /* Lato-ThinItalic.ttf */; };
 		C7B7922F2BD686BC0023DC34 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B792262BD686BC0023DC34 /* Lato-Bold.ttf */; };
 		C7B792302BD686BC0023DC34 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B792272BD686BC0023DC34 /* Lato-Black.ttf */; };
+		C7C4A9A52BDA301D0077438A /* SearchClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4A9A42BDA301D0077438A /* SearchClientViewModel.swift */; };
+		C7C4A9A72BDA38F00077438A /* SearchClientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4A9A62BDA38F00077438A /* SearchClientTableViewCell.swift */; };
+		C7C4A9AA2BDA62960077438A /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4A9A92BDA62960077438A /* NoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C724C4432BDA7FA600491F8D /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		C767FB142BD6989800F8BB6F /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		C767FB152BD6989800F8BB6F /* NotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
 		C79C463F2BD77428009DB5D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -61,6 +69,9 @@
 		C79C464A2BD7B908009DB5D0 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
 		C79C464C2BD7C8D8009DB5D0 /* CreateNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteView.swift; sourceTree = "<group>"; };
 		C79C464E2BD7CE96009DB5D0 /* CreateNoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNoteView.xib; sourceTree = "<group>"; };
+		C7A943D82BD8C2BA00165E0E /* SearchClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClientViewController.swift; sourceTree = "<group>"; };
+		C7A943DC2BD8DE4E00165E0E /* EditDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptionView.swift; sourceTree = "<group>"; };
+		C7A943DE2BD8EF5700165E0E /* CreateNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewModel.swift; sourceTree = "<group>"; };
 		C7B791EC2BD67E4E0023DC34 /* meeting_notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meeting_notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B791EF2BD67E4E0023DC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7B791F12BD67E4E0023DC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +94,9 @@
 		C7B792252BD686BC0023DC34 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		C7B792262BD686BC0023DC34 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		C7B792272BD686BC0023DC34 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		C7C4A9A42BDA301D0077438A /* SearchClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClientViewModel.swift; sourceTree = "<group>"; };
+		C7C4A9A62BDA38F00077438A /* SearchClientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClientTableViewCell.swift; sourceTree = "<group>"; };
+		C7C4A9A92BDA62960077438A /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +124,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C724C4422BDA7F8B00491F8D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C724C4432BDA7FA600491F8D /* protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C79C463D2BD77401009DB5D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C7B791F32BD67E4E0023DC34 /* HomeViewController.swift */,
 				C79C464A2BD7B908009DB5D0 /* CreateNoteViewController.swift */,
+				C7A943D82BD8C2BA00165E0E /* SearchClientViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				C79C463F2BD77428009DB5D0 /* HomeViewModel.swift */,
+				C7A943DE2BD8EF5700165E0E /* CreateNoteViewModel.swift */,
+				C7C4A9A42BDA301D0077438A /* SearchClientViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,6 +159,7 @@
 				C79C464E2BD7CE96009DB5D0 /* CreateNoteView.xib */,
 				C79C46462BD7A0F4009DB5D0 /* labelCollectionViewCell.swift */,
 				C79C46422BD78956009DB5D0 /* labelsView.swift */,
+				C7C4A9A62BDA38F00077438A /* SearchClientTableViewCell.swift */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -163,11 +189,14 @@
 			children = (
 				C7B791EF2BD67E4E0023DC34 /* AppDelegate.swift */,
 				C7B791F12BD67E4E0023DC34 /* SceneDelegate.swift */,
+				C724C4422BDA7F8B00491F8D /* Protocols */,
+				C7C4A9A82BDA62800077438A /* Model */,
 				C79C463D2BD77401009DB5D0 /* View */,
 				C79C463E2BD77414009DB5D0 /* ViewModel */,
 				C7B791F52BD67E4E0023DC34 /* Main.storyboard */,
 				C767FB142BD6989800F8BB6F /* NotesTableViewCell.swift */,
 				C767FB152BD6989800F8BB6F /* NotesTableViewCell.xib */,
+				C7A943DC2BD8DE4E00165E0E /* EditDescriptionView.swift */,
 				C79C46412BD78915009DB5D0 /* CustomClasses */,
 				C7B791F82BD67E4F0023DC34 /* Assets.xcassets */,
 				C7B791FA2BD67E4F0023DC34 /* LaunchScreen.storyboard */,
@@ -200,6 +229,14 @@
 				C7B792122BD67E4F0023DC34 /* meeting_notesUITestsLaunchTests.swift */,
 			);
 			path = meeting_notesUITests;
+			sourceTree = "<group>";
+		};
+		C7C4A9A82BDA62800077438A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4A9A92BDA62960077438A /* NoteModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,12 +384,19 @@
 				C7B791F42BD67E4E0023DC34 /* HomeViewController.swift in Sources */,
 				C7B791F02BD67E4E0023DC34 /* AppDelegate.swift in Sources */,
 				C79C464D2BD7C8D8009DB5D0 /* CreateNoteView.swift in Sources */,
+				C7C4A9A52BDA301D0077438A /* SearchClientViewModel.swift in Sources */,
+				C7C4A9A72BDA38F00077438A /* SearchClientTableViewCell.swift in Sources */,
 				C79C464B2BD7B908009DB5D0 /* CreateNoteViewController.swift in Sources */,
 				C7B791F22BD67E4E0023DC34 /* SceneDelegate.swift in Sources */,
 				C79C46402BD77428009DB5D0 /* HomeViewModel.swift in Sources */,
+				C7A943DF2BD8EF5700165E0E /* CreateNoteViewModel.swift in Sources */,
+				C7A943D92BD8C2BA00165E0E /* SearchClientViewController.swift in Sources */,
+				C7C4A9AA2BDA62960077438A /* NoteModel.swift in Sources */,
 				C767FB162BD6989800F8BB6F /* NotesTableViewCell.swift in Sources */,
 				C79C46482BD7A0F4009DB5D0 /* labelCollectionViewCell.swift in Sources */,
+				C7A943DD2BD8DE4E00165E0E /* EditDescriptionView.swift in Sources */,
 				C79C46432BD78956009DB5D0 /* labelsView.swift in Sources */,
+				C724C4442BDA7FA600491F8D /* protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

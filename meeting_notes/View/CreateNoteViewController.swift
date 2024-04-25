@@ -7,18 +7,53 @@
 
 import UIKit
 
-class CreateNoteViewController: UIViewController {
+enum EditDescription{
+    case bold, italic, underline, leftAlign, rightAlign, centerAlign, link
+}
+
+
+class CreateNoteViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet var navigationView: UIView!
     
     let statusBarHeight = UIApplication.shared.statusBarFrame.height
+    let editDescriptionView = EditDescriptionView(frame: CGRect(x: 0, y: 100, width: 350, height: 33))
+    static var isKeyboardOnScreen : Bool = false
     
     @IBOutlet var searchClientView: UIView!
+    
+    @IBOutlet var clientName: UILabel!
+    
     @IBOutlet var addSubjectView: UIView!
+    
+    @IBOutlet var addSubjectTextfield: UITextField! {
+        didSet {
+                let PlaceholderText = NSAttributedString(string: "Add Subject",
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "create_note_placeholder_color")!])
+                
+                addSubjectTextfield.attributedPlaceholder = PlaceholderText
+            }
+    }
+    
     @IBOutlet var dateView: UIView!
     @IBOutlet var enterLabelView: UIView!
     @IBOutlet var descriptionView: UIView!
     @IBOutlet var attachmentsView: UIView!
+    
+    @IBOutlet var descriptionTextView: UITextView!
+    
+    @IBAction func closeButtonAction(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func createParagraphStyle(textAlignment: NSTextAlignment) -> NSParagraphStyle {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = textAlignment
+        return paragraphStyle
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +72,33 @@ class CreateNoteViewController: UIViewController {
         view.addSubview(descriptionView)
         view.addSubview(attachmentsView)
         
+        searchClientView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSearchClientTap)))
+        
+        
+        
         view.addSubview(navigationView)
+        setupEditDescriptionView()
+        
+        
+        descriptionTextView.delegate = self
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleKeyboardShow(keyboardShowNotification:)),
+                                               name: UIResponder.keyboardDidShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleKeyboardHide(keyboardShowNotification:)),
+                                               name: UIResponder.keyboardDidHideNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name: UIScene.willDeactivateNotification, object: nil)
         
     }
+    
+    
+        
+    
     
 
 }
